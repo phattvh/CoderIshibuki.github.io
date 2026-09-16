@@ -28,6 +28,7 @@ export const DATA = {
       category: "Programming Languages",
       items: [
         { name: "C++", icon: "cpp" },
+        { name: "C#", icon: "cs" },
         { name: "Python", icon: "py" },
         { name: "TypeScript", icon: "ts" },
       ]
