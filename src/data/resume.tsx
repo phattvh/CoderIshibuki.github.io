@@ -174,23 +174,6 @@ export const DATA = {
       image: "",
       video: "",
     },
-    {
-      title: "TFT AI Assistant",
-      href: "https://github.com/phattvh/",
-      dates: "March 2026",
-      active: true,
-      description: "Built an AI assistant for Teamfight Tactics.",
-      technologies: ["Python", "AI"],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/phattvh/",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    }
   ],
   hackathons: [] as any[],
 };
