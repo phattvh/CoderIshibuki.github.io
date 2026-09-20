@@ -148,32 +148,16 @@ export const DATA = {
       end: "2029",
     }
   ],
-  projects: [
-    {
-      title: "Online Exam System",
-      href: "https://github.com/phattvh/ExamTestWebsite",
-      dates: "May 2026",
-      active: true,
-      description: "Developed an online exam system.",
-      technologies: [
-        "FastAPI",
-        "Python",
-        "PostgreSQL",
-        "React",
-        "TypeScript",
-        "Docker",
-        "Mako",
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/phattvh/ExamTestWebsite",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "",
-      video: "",
-    },
-  ],
+  projects: [] as {
+    title: string;
+    href: string;
+    dates: string;
+    active: boolean;
+    description: string;
+    technologies: string[];
+    links: { type: string; href: string; icon: React.ReactNode }[];
+    image: string;
+    video: string;
+  }[],
   hackathons: [] as any[],
 };
