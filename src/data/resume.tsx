@@ -143,6 +143,7 @@ export const DATA = {
       school: "Ho Chi Minh City University of Education",
       href: "https://hcmue.edu.vn/",
       degree: "Bachelor of Information Technology",
+      gpa: "3.2/4.0",
       logoUrl: "/hcmue-logo.png",
       start: "2025",
       end: "2029",

@@ -98,6 +98,11 @@ export default function Page() {
                       <div className="font-sans text-sm text-muted-foreground">
                         {education.degree}
                       </div>
+                      {education.gpa && (
+                        <div className="font-sans text-xs text-muted-foreground">
+                          GPA: {education.gpa}
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
