@@ -21,7 +21,7 @@ export const DATA = {
   description:
     "Full name is Tran Vu Hoa Phat, I am focused on Full-Stack Development, AI Engineering & Research.",
   summary:
-    "I am focused on solving complex problems and writing clean, maintainable code. My passion lies at the intersection of systems architecture, algorithmic optimization, and building meaningful technologies that scale.",
+    "Experienced in building web applications, handling responsibilities from requirements analysis and architectural design to deployment and product operations support. Looking to further develop expertise in system architecture and infrastructure operations.",
   avatarUrl: "/me.png",
   skills: [
     {

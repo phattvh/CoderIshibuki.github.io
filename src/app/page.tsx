@@ -7,8 +7,8 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
+import SkillsSection from "@/components/section/skills-section";
 import { ArrowUpRight } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
@@ -121,32 +121,7 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
-
-          <div className="flex flex-col gap-y-6 mt-4">
-            {DATA.skills.map((group, id) => (
-              <BlurFade key={group.category} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <h3 className="text-lg font-semibold mb-2">{group.category}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {group.items.map((skill) => (
-                    <Tooltip key={skill.name}>
-                      <TooltipTrigger>
-                        <img 
-                          src={`https://skillicons.dev/icons?i=${skill.icon}&theme=dark`} 
-                          alt={skill.name} 
-                          width={48} 
-                          height={48} 
-                          className="object-contain" 
-                        />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>{skill.name}</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  ))}
-                </div>
-              </BlurFade>
-            ))}
-          </div>
+          <SkillsSection />
         </div>
       </section>
       <section id="projects">
