@@ -131,11 +131,11 @@ export const DATA = {
       href: "https://www.facebook.com/CLBTinHocHCMUE",
       badges: [],
       location: "Ho Chi Minh City",
-      title: "Member",
+      title: "Member — Technical Department",
       logoUrl: "/clb-tinhoc.png",
       start: "Oct 2025",
       end: "Present",
-      description: "Member of the HCMUE Informatics Club.",
+      description: "Member of the Technical Department at HCMUE Informatics Club.",
     }
   ],
   education: [
