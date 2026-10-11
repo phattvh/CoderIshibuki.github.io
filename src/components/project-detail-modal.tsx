@@ -4,12 +4,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   ArrowUpRight,
-  CheckCircle2,
   MapPin,
   QrCode,
   SlidersHorizontal,
-  Sparkles,
-  Users,
   X,
   Zap,
 } from "lucide-react";
@@ -39,7 +36,6 @@ export interface ProjectData {
   badge?: string;
   affiliation?: string;
   role?: string;
-  teamSize?: string;
   shortDescription?: string;
   description: string;
   workflow?: readonly ProjectWorkflowStep[];
@@ -124,45 +120,25 @@ export function ProjectDetailModal({ project, onClose }: Props) {
             {/* Header */}
             <div className="flex items-start justify-between gap-3 p-5 sm:p-6 border-b border-border/60 bg-muted/20 shrink-0">
               <div className="flex flex-col gap-2 min-w-0">
-                <div className="flex flex-wrap items-center gap-1.5">
-                  {project.featured && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-primary/10 text-primary border border-primary/20">
-                      <Sparkles className="h-3 w-3" aria-hidden />
-                      Featured
-                    </span>
-                  )}
-                  {project.category && (
-                    <Badge variant="outline" className="text-[11px] font-medium border-border/70">
-                      {project.category}
-                    </Badge>
-                  )}
+                {/* Single-row essential badges */}
+                <div className="flex items-center gap-2">
                   {project.badge && (
-                    <Badge variant="secondary" className="text-[11px] font-medium">
+                    <Badge variant="secondary" className="text-[11px] font-medium whitespace-nowrap">
                       {project.badge}
-                    </Badge>
-                  )}
-                  {project.affiliation && (
-                    <Badge variant="outline" className="text-[11px] font-medium text-muted-foreground border-border/70">
-                      {project.affiliation}
-                    </Badge>
-                  )}
-                  {project.teamSize && (
-                    <Badge variant="outline" className="text-[11px] font-medium text-muted-foreground border-border/70 flex items-center gap-1">
-                      <Users className="h-3 w-3" aria-hidden />
-                      {project.teamSize}
                     </Badge>
                   )}
                   <time className="text-xs text-muted-foreground whitespace-nowrap px-2.5 py-0.5 rounded-md bg-muted/60 border border-border/50">
                     {project.dates}
                   </time>
                 </div>
+
                 <div>
                   <h2 id="project-modal-title" className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
                     {project.title}
                   </h2>
-                  {project.role && (
-                    <p className="text-xs sm:text-sm font-medium text-muted-foreground mt-0.5">
-                      {project.role}
+                  {(project.role || project.affiliation) && (
+                    <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 font-medium">
+                      {[project.role, project.affiliation].filter(Boolean).join(" • ")}
                     </p>
                   )}
                 </div>

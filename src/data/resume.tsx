@@ -120,7 +120,7 @@ export const DATA = {
       href: "https://olp.hcmue.edu.vn/",
       badges: [],
       location: "Ho Chi Minh City",
-      title: "Member — Open Source Software Category",
+      title: "Member - Open Source Software Category",
       logoUrl: "/hcmue-logo.png",
       start: "May 2026",
       end: "Present",
@@ -131,7 +131,7 @@ export const DATA = {
       href: "https://www.facebook.com/CLBTinHocHCMUE",
       badges: [],
       location: "Ho Chi Minh City",
-      title: "Member — Technical Department",
+      title: "Member - Technical Department",
       logoUrl: "/clb-tinhoc.png",
       start: "Oct 2025",
       end: "Present",
@@ -157,51 +157,50 @@ export const DATA = {
       dates: "Oct 2026",
       active: true,
       featured: true,
-      badge: "UP2026 Freshmen Orientation",
-      affiliation: "Faculty of IT • Đoàn - Hội",
-      role: "Full-Stack & Infrastructure — Technical Team",
-      teamSize: "Team of 4",
+      badge: "50th Anniversary & UP2026",
+      affiliation: "Youth Union & Student Association - Faculty of IT (HCMUE)",
+      role: "Core Technical Team",
       shortDescription:
-        "Event web application featuring high-concurrency QR check-ins, dynamic campus map unlocking, and gamified trivia quests.",
+        "Official digital passport web application celebrating HCMUE's 50th Anniversary (1976-2026) and UP2026 Freshmen Orientation, featuring high-concurrency QR quests and dynamic campus map unlocking.",
       description:
-        "Official web application for the HCMUE Digital Passport (UP2026 Freshmen Orientation Event), engineered by a core 4-member technical team from the Faculty of Information Technology's Youth Union & Student Association. Built to handle high-concurrency traffic during campus-wide check-in hours, providing an interactive, gamified digital passport journey for thousands of incoming freshmen.",
+        "Official web application for the HCMUE Digital Passport, built to celebrate the 50th Anniversary of Ho Chi Minh City University of Education (1976-2026) and the UP2026 Freshmen Orientation Event on October 27, 2026. Proposed and engineered by a 4-member technical team from the Youth Union & Student Association of the Faculty of Information Technology, the system delivers an interactive digital passport running directly on mobile browsers (Chrome, Safari, and Zalo in-app browser), backed by a dedicated Nginx VPS with caching and rate limiting to withstand high-concurrency check-in traffic.",
       workflow: [
         {
           step: "01",
-          title: "Check-in & Personal QR Issuance",
-          desc: "Freshmen scan the station QR at Station 1 to register with their Student ID & PIN, generating a personal QR credential with an initially grayscale campus map.",
+          title: "Check-in & Account Activation",
+          desc: "Students register with their Student ID (MSSV), Full Name, and PIN (opened early on the evening of Oct 26 to eliminate check-in bottlenecks). The system issues a personal QR credential and displays a campus map of 280 An Duong Vuong with uncompleted buildings initially in grayscale.",
         },
         {
           step: "02",
-          title: "Multi-Station Quests & Dynamic Map",
-          desc: "At each station, students scan the station QR to unlock trivia questions (30 questions across 3 themes). Station Leads scan the student's QR to verify completion, awarding digital badges and dynamically illuminating campus buildings in color.",
+          title: "Station Quests & Map Progression",
+          desc: "Students scan station QR codes to open randomized quiz challenges from a 30-question bank across 3 topics. Upon completion, Station Leads scan the student's personal QR code using mobile cameras to verify and issue digital badges with timestamps, dynamically illuminating the building on the student's map.",
         },
         {
           step: "03",
           title: "Gift Redemption & Anti-Fraud Verification",
-          desc: "Upon collecting sufficient badges, students redeem gifts at the counter. Coordinators verify credentials via QR scan with student ID cross-checks to eliminate duplicate claims, while the Organizing Committee monitors real-time completion leaderboards.",
+          desc: "When students accumulate sufficient badges, redemption staff scan their personal QR code to check eligibility and mark gifts as claimed to prevent duplicate redemption, cross-checking physical student ID cards. The Organizing Committee monitors real-time completion leaderboards with Excel export.",
         },
       ],
       highlights: [
         {
-          title: "High-Concurrency Architecture",
+          title: "High-Concurrency VPS & Nginx Caching",
           description:
-            "Engineered to withstand heavy concurrent traffic spikes during peak check-in and quiz-taking hours across campus.",
+            "Dedicated server running custom Nginx reverse proxy with caching and rate limiting to handle hundreds of concurrent student interactions with <2s response times and hourly automated database backups.",
         },
         {
-          title: "Dynamic Campus Map",
+          title: "Dynamic Campus Map Illumination",
           description:
-            "Visual exploration map where grayscale building illustrations dynamically illuminate in color as stations are completed.",
+            "Interactive campus map (280 An Duong Vuong) that dynamically transitions building illustrations from grayscale to illuminated colors in real-time as stations are validated.",
         },
         {
-          title: "Dual QR Code Verification",
+          title: "Two-Way QR Ecosystem & Anti-Fraud",
           description:
-            "Personal student QR combined with Station Lead scanning for challenge verification and gift redemption without duplicate claims.",
+            "Dual QR workflow combining station standee QR codes for task access and student personal QR codes for Station Lead verification and gift claiming, preventing duplicate redemption.",
         },
         {
-          title: "Admin Control & Real-time Ranking",
+          title: "Admin CMS & Data Privacy Compliance",
           description:
-            "Live completion leaderboard and a flexible admin dashboard to reconfigure stations, quiz banks, and rules on-the-fly without code redeployment.",
+            "Centralized dashboard to reconfigure stations, buildings, quiz banks, and rules on-the-fly without code redeployment, fully compliant with Vietnam's Personal Data Protection Law (91/2025/QH15) with post-event data wipe.",
         },
       ],
       technologies: [],
