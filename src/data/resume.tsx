@@ -149,16 +149,66 @@ export const DATA = {
       end: "2029",
     }
   ],
-  projects: [] as {
-    title: string;
-    href: string;
-    dates: string;
-    active: boolean;
-    description: string;
-    technologies: string[];
-    links: { type: string; href: string; icon: React.ReactNode }[];
-    image: string;
-    video: string;
-  }[],
+  projects: [
+    {
+      title: "HCMUE Digital Passport",
+      category: "Web & Systems",
+      href: "",
+      dates: "Oct 2026",
+      active: true,
+      featured: true,
+      badge: "UP2026 Freshmen Orientation",
+      affiliation: "Faculty of IT • Đoàn - Hội",
+      role: "Full-Stack & Infrastructure — Technical Team",
+      teamSize: "Team of 4",
+      shortDescription:
+        "Event web application featuring high-concurrency QR check-ins, dynamic campus map unlocking, and gamified trivia quests.",
+      description:
+        "Official web application for the HCMUE Digital Passport (UP2026 Freshmen Orientation Event), engineered by a core 4-member technical team from the Faculty of Information Technology's Youth Union & Student Association. Built to handle high-concurrency traffic during campus-wide check-in hours, providing an interactive, gamified digital passport journey for thousands of incoming freshmen.",
+      workflow: [
+        {
+          step: "01",
+          title: "Check-in & Personal QR Issuance",
+          desc: "Freshmen scan the station QR at Station 1 to register with their Student ID & PIN, generating a personal QR credential with an initially grayscale campus map.",
+        },
+        {
+          step: "02",
+          title: "Multi-Station Quests & Dynamic Map",
+          desc: "At each station, students scan the station QR to unlock trivia questions (30 questions across 3 themes). Station Leads scan the student's QR to verify completion, awarding digital badges and dynamically illuminating campus buildings in color.",
+        },
+        {
+          step: "03",
+          title: "Gift Redemption & Anti-Fraud Verification",
+          desc: "Upon collecting sufficient badges, students redeem gifts at the counter. Coordinators verify credentials via QR scan with student ID cross-checks to eliminate duplicate claims, while the Organizing Committee monitors real-time completion leaderboards.",
+        },
+      ],
+      highlights: [
+        {
+          title: "High-Concurrency Architecture",
+          description:
+            "Engineered to withstand heavy concurrent traffic spikes during peak check-in and quiz-taking hours across campus.",
+        },
+        {
+          title: "Dynamic Campus Map",
+          description:
+            "Visual exploration map where grayscale building illustrations dynamically illuminate in color as stations are completed.",
+        },
+        {
+          title: "Dual QR Code Verification",
+          description:
+            "Personal student QR combined with Station Lead scanning for challenge verification and gift redemption without duplicate claims.",
+        },
+        {
+          title: "Admin Control & Real-time Ranking",
+          description:
+            "Live completion leaderboard and a flexible admin dashboard to reconfigure stations, quiz banks, and rules on-the-fly without code redeployment.",
+        },
+      ],
+      technologies: [],
+      links: [],
+      image: "",
+      video: "",
+    },
+  ],
   hackathons: [] as any[],
 };
